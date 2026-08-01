@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Weather</h1>
+    <p class="subtitle">Search any city for current conditions</p>
+
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Enter a city..." />
+      <button onclick="fetchWeather()">Search</button>
+    </div>
+
+    <p id="errorMsg" class="error"></p>
+
+    <div id="weatherResult" class="hidden">
+
+      <div class="main-card">
+        <h2 id="cityName"></h2>
+        <div class="temp-row">
+          <span id="temp" class="temp-big"></span>
+          <img id="weatherIcon" src="" alt="weather icon" />
+        </div>
+        <p id="description" class="description"></p>
+        <p id="feelsLike" class="feels-like"></p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <p class="stat-label">Humidity</p>
+          <p class="stat-value" id="humidity"></p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">Wind</p>
+          <p class="stat-value" id="wind"></p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">Pressure</p>
+          <p class="stat-value" id="pressure"></p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">Visibility</p>
+          <p class="stat-value" id="visibility"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
